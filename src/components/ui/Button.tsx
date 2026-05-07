@@ -42,8 +42,7 @@ export function LinkButton<Path extends string>({
   children: React.ReactNode;
 }) {
   return (
-    // @ts-expect-error - next-intl Link href typing
-    <Link href={href} className={cn(base, styles[variant], className)}>
+    <Link href={href as never} className={cn(base, styles[variant], className)}>
       {children}
     </Link>
   );

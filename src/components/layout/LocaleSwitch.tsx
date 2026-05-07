@@ -15,8 +15,7 @@ export function LocaleSwitch({ tone = "light" }: { tone?: "light" | "dark" }) {
   const onChange = (next: (typeof routing.locales)[number]) => {
     if (next === locale) return;
     router.replace(
-      // @ts-expect-error - next-intl pathname/params interplay
-      { pathname, params },
+      { pathname, params } as never,
       { locale: next }
     );
   };

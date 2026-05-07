@@ -33,8 +33,7 @@ export async function ProductsGrid({ locale }: { locale: Locale }) {
             const copy = p.copy[locale];
             return (
               <Link
-                // @ts-expect-error - next-intl typed routes
-                href={`/products/${p.id}`}
+                href={`/products/${p.id}` as never}
                 key={p.id}
                 className="group relative flex flex-col overflow-hidden rounded-2xl bg-cream ring-1 ring-charcoal/8 transition-all duration-500 hover:ring-charcoal/20 hover:-translate-y-1"
               >

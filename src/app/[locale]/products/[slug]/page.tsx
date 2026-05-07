@@ -189,8 +189,7 @@ export default async function ProductPage({
               const c = p.copy[locale];
               return (
                 <Link
-                  // @ts-expect-error - next-intl typed routes
-                  href={`/products/${p.id}`}
+                  href={`/products/${p.id}` as never}
                   key={p.id}
                   className="group relative flex items-center justify-between gap-6 rounded-xl bg-cream p-6 ring-1 ring-charcoal/8 transition-all hover:ring-charcoal/20"
                 >

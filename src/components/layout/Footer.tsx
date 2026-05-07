@@ -29,8 +29,7 @@ export async function Footer() {
               {products.map((p) => (
                 <li key={p.id}>
                   <Link
-                    // @ts-expect-error - next-intl typed routes
-                    href={`/products/${p.id}`}
+                    href={`/products/${p.id}` as never}
                     className="text-[14px] text-cream/85 hover:text-cream transition-colors"
                   >
                     {p.brand}

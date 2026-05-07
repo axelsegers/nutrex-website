@@ -3,14 +3,16 @@ import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { LocaleSwitch } from "./LocaleSwitch";
 
-type NavItem = { label: string; href: string; routed?: boolean };
+type NavItem =
+  | { kind: "route"; label: string; href: "/" | "/products" | "/contact" }
+  | { kind: "anchor"; label: string; hash: string };
 
 export async function Header() {
   const t = await getTranslations("Nav");
   const items: NavItem[] = [
-    { label: t("products"), href: "/products", routed: true },
-    { label: t("species"), href: "/#species" },
-    { label: t("innovation"), href: "/#mission" },
+    { kind: "route", label: t("products"), href: "/products" },
+    { kind: "anchor", label: t("species"), hash: "species" },
+    { kind: "anchor", label: t("innovation"), hash: "mission" },
   ];
 
   return (
@@ -22,26 +24,26 @@ export async function Header() {
           </Link>
 
           <nav className="hidden items-center gap-7 md:flex" aria-label="Primary">
-            {items.map((item) =>
-              item.routed ? (
-                <Link
-                  // @ts-expect-error - next-intl typed routes
-                  href={item.href}
-                  key={item.label}
-                  className="text-[13px] tracking-tight text-charcoal/80 transition-colors hover:text-charcoal"
-                >
+            {items.map((item) => {
+              const cls =
+                "text-[13px] tracking-tight text-charcoal/80 transition-colors hover:text-charcoal";
+              if (item.kind === "anchor") {
+                return (
+                  <Link
+                    key={item.label}
+                    href={{ pathname: "/", hash: item.hash }}
+                    className={cls}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              }
+              return (
+                <Link key={item.label} href={item.href} className={cls}>
                   {item.label}
                 </Link>
-              ) : (
-                <a
-                  href={item.href}
-                  key={item.label}
-                  className="text-[13px] tracking-tight text-charcoal/80 transition-colors hover:text-charcoal"
-                >
-                  {item.label}
-                </a>
-              )
-            )}
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">
