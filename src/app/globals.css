@@ -1,26 +1,143 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── Brand palette — "Field meets Lab" ─────────────────── */
+  --color-cream: #faf7f0;
+  --color-paper: #f1ece1;
+  --color-paper-deep: #e8e1d0;
+  --color-charcoal: #1a1a1a;
+  --color-stone: #6b6b66;
+  --color-bone: #d9d3c4;
+
+  --color-olive-50: #f0f3e9;
+  --color-olive-100: #d8e0c1;
+  --color-olive-200: #b9c598;
+  --color-olive-400: #7d9658;
+  --color-olive-500: #5a7a3c;
+  --color-olive-600: #3d5a2c;
+  --color-olive-700: #2c4220;
+  --color-olive-900: #1f3417;
+
+  --color-clay-100: #f4dac8;
+  --color-clay-300: #e09a6b;
+  --color-clay-500: #c9622b;
+  --color-clay-600: #a84d1c;
+  --color-clay-700: #7c360f;
+
+  /* Defaults that body uses */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-charcoal);
+
+  /* ── Typography ──────────────────────────────────────────── */
+  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SFMono-Regular", monospace;
+
+  /* ── Containers ─────────────────────────────────────────── */
+  --container-narrow: 56rem;
+  --container-default: 80rem;
+  --container-wide: 96rem;
+
+  /* ── Easing ─────────────────────────────────────────────── */
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ─────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+}
+
+::selection {
+  background: var(--color-olive-600);
+  color: var(--color-cream);
+}
+
+/* Subtle paper-grain texture used on cream surfaces */
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.1  0 0 0 0 0.1  0 0 0 0 0.1  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 240px 240px;
+}
+.grain > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fraunces optical-size + soft axes */
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 0;
+}
+.font-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 80, "WONK" 1;
+}
+
+/* Editorial divider */
+.divider-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    color-mix(in srgb, var(--color-charcoal) 18%, transparent) 12%,
+    color-mix(in srgb, var(--color-charcoal) 18%, transparent) 88%,
+    transparent
+  );
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 60s linear infinite;
+  will-change: transform;
+}
+
+/* Ken Burns slow-zoom */
+@keyframes ken-burns {
+  0% { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.08) translate(-1.5%, -1%); }
+}
+.ken-burns {
+  animation: ken-burns 20s var(--ease-out-quart) infinite alternate;
+  will-change: transform;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .ken-burns,
+  .marquee-track {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* Focus ring tuned for cream surfaces */
+*:focus-visible {
+  outline: 2px solid var(--color-olive-600);
+  outline-offset: 3px;
+  border-radius: 2px;
 }

@@ -1,0 +1,95 @@
+{
+  "Nav": {
+    "products": "Producten",
+    "species": "Diersoorten",
+    "innovation": "Innovatie",
+    "insights": "Inzichten",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "eyebrow": "Wetenschappelijke voederadditieven · Made in Europe",
+    "titleStart": "Waar",
+    "titleEm": "wetenschap",
+    "titleEnd": "de boerderij ontmoet.",
+    "sub": "Voederadditieven die dieren laten gedijen — en boeren met vertrouwen laten groeien.",
+    "primaryCta": "Ontdek onze oplossingen",
+    "secondaryCta": "Spreek een specialist",
+    "stamp": "Made in Europe · Sinds 1988",
+    "trial": "LIVE · PROEF PLUIMVEE #248",
+    "trialMetric1": "VC −4,2%",
+    "trialMetric2": "Groei +3,1%"
+  },
+  "Mission": {
+    "label": "Onze missie",
+    "title": "Wij beschermen voeder, ondersteunen prestaties en helpen telers grip houden op wat telt.",
+    "items": [
+      {
+        "kicker": "01",
+        "title": "Voeder beschermen",
+        "body": "Mycotoxines, oxidatie, contaminatie — wij neutraliseren de bedreigingen die je dieren nooit zien."
+      },
+      {
+        "kicker": "02",
+        "title": "Prestaties ondersteunen",
+        "body": "Fytogene en enzymatische technologieën houden de groei op koers, ook als de omstandigheden tegenwerken."
+      },
+      {
+        "kicker": "03",
+        "title": "Kosten beheersen",
+        "body": "Betere voederconversie, minder variabiliteit — meetbare resultaten, stal na stal."
+      }
+    ]
+  },
+  "Products": {
+    "label": "Drie productlijnen",
+    "title": "Speciaalproducten die in synergie werken.",
+    "viewAll": "Alle producten",
+    "viewProduct": "Bekijk product"
+  },
+  "Species": {
+    "label": "Voor elke stal",
+    "title": "Specifieke oplossingen voor elke diersoort.",
+    "items": [
+      { "name": "Pluimvee", "tag": "Vleeskuikens · Leghennen · Vermeerdering" },
+      { "name": "Varkens", "tag": "Zeugen · Biggen · Vleesvarkens" },
+      { "name": "Herkauwers", "tag": "Melkvee · Vleesvee · Kalveren" },
+      { "name": "Aquacultuur", "tag": "Vinvis · Garnalen" }
+    ]
+  },
+  "Stats": {
+    "label": "Nutrex in cijfers",
+    "title": "Stilzwijgend gebouwd. Wereldwijd vertrouwd.",
+    "items": [
+      { "value": "35+", "label": "Jaar praktijk", "note": "Betrouwbare partner sinds 1988." },
+      { "value": "50+", "label": "Landen", "note": "Via opgeleide vertegenwoordigers wereldwijd." },
+      { "value": "2", "label": "Europese sites", "note": "Belgisch ontwikkeld, EU-gereguleerd." },
+      { "value": "100%", "label": "Wetenschappelijk", "note": "Enkel proef-gevalideerde formulaties." }
+    ]
+  },
+  "Contact": {
+    "label": "Word partner",
+    "title": "Uitdagingen zijn er altijd. Steun ook.",
+    "body": "Vertel ons wat je produceert en waar — een Nutrex-specialist contacteert je binnen twee werkdagen.",
+    "cta": "Start het gesprek"
+  },
+  "Footer": {
+    "tagline": "Wetenschappelijke voederadditieven, made in Europe.",
+    "rights": "© {year} Nutrex N.V. · Alle rechten voorbehouden.",
+    "address": "Achterstenhoek 5 · B-2275 Lille · België",
+    "columns": {
+      "products": "Producten",
+      "company": "Bedrijf",
+      "support": "Support"
+    }
+  },
+  "Product": {
+    "back": "Alle producten",
+    "applicationsTitle": "Toepassingsgebieden",
+    "benefitsTitle": "Belangrijkste voordelen",
+    "modeTitle": "Werkingsmechanisme",
+    "ctaTitle": "Iets voor jouw bedrijf?",
+    "ctaBody": "Vraag een staal, technische fiche of een gesprek met onze diersoort-specialist aan.",
+    "ctaButton": "Vraag staal aan"
+  }
+}

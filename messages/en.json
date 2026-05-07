@@ -1,0 +1,95 @@
+{
+  "Nav": {
+    "products": "Feed Products",
+    "species": "Target Species",
+    "innovation": "Innovation",
+    "insights": "Insights",
+    "about": "About",
+    "contact": "Contact us"
+  },
+  "Hero": {
+    "eyebrow": "Science-based feed additives · Made in Europe",
+    "titleStart": "Where",
+    "titleEm": "science",
+    "titleEnd": "meets the farm.",
+    "sub": "Pioneering feed additives that empower livestock to thrive — and farmers to grow with confidence.",
+    "primaryCta": "Discover our solutions",
+    "secondaryCta": "Talk to a specialist",
+    "stamp": "Made in Europe · Since 1988",
+    "trial": "LIVE · POULTRY TRIAL #248",
+    "trialMetric1": "FCR −4.2%",
+    "trialMetric2": "BWG +3.1%"
+  },
+  "Mission": {
+    "label": "Our mission",
+    "title": "We safeguard feed, sustain performance, and help producers manage what matters.",
+    "items": [
+      {
+        "kicker": "01",
+        "title": "Safeguard the feed",
+        "body": "Mycotoxins, oxidation, contamination — we neutralise the threats your animals never see."
+      },
+      {
+        "kicker": "02",
+        "title": "Sustain performance",
+        "body": "Phytogenic and enzymatic technologies keep growth on curve, even when conditions push back."
+      },
+      {
+        "kicker": "03",
+        "title": "Manage production cost",
+        "body": "Better feed conversion, less variability — measurable returns barn after barn."
+      }
+    ]
+  },
+  "Products": {
+    "label": "Three product lines",
+    "title": "Specialty additives, engineered to work in concert.",
+    "viewAll": "All products",
+    "viewProduct": "View product"
+  },
+  "Species": {
+    "label": "Built for every barn",
+    "title": "Specific solutions for every species.",
+    "items": [
+      { "name": "Poultry", "tag": "Broilers · Layers · Breeders" },
+      { "name": "Swine", "tag": "Sows · Piglets · Finishers" },
+      { "name": "Ruminants", "tag": "Dairy · Beef · Calves" },
+      { "name": "Aquaculture", "tag": "Fin-fish · Shrimp" }
+    ]
+  },
+  "Stats": {
+    "label": "Nutrex at a glance",
+    "title": "Built quietly. Trusted globally.",
+    "items": [
+      { "value": "35+", "label": "Years of practice", "note": "Reliable partner since 1988." },
+      { "value": "50+", "label": "Countries served", "note": "Through trained representatives worldwide." },
+      { "value": "2", "label": "European facilities", "note": "Belgian-engineered, EU-regulated." },
+      { "value": "100%", "label": "Science-backed", "note": "Trial-validated formulations only." }
+    ]
+  },
+  "Contact": {
+    "label": "Become a partner",
+    "title": "Challenges are inevitable. Support is here.",
+    "body": "Tell us what you produce and where you produce it — a Nutrex specialist will get back to you within two business days.",
+    "cta": "Start the conversation"
+  },
+  "Footer": {
+    "tagline": "Science-based feed additives, made in Europe.",
+    "rights": "© {year} Nutrex N.V. · All rights reserved.",
+    "address": "Achterstenhoek 5 · B-2275 Lille · Belgium",
+    "columns": {
+      "products": "Products",
+      "company": "Company",
+      "support": "Support"
+    }
+  },
+  "Product": {
+    "back": "All products",
+    "applicationsTitle": "Application areas",
+    "benefitsTitle": "Key benefits",
+    "modeTitle": "Mode of action",
+    "ctaTitle": "Want this in your operation?",
+    "ctaBody": "Request a sample, technical data sheet, or a call with our species specialist.",
+    "ctaButton": "Request sample"
+  }
+}
